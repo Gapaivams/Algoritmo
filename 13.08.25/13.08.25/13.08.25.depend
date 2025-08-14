@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1755131997 source:c:\users\gabrieldepaivamessia\documents\algoritmo\13.08.25\13.08.25\main.c
+	<stdio.h>
+	<stdlib.h>
+	<math.h>
+
