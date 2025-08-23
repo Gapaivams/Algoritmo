@@ -1,0 +1,7 @@
+# depslib dependency file v1.0
+1755909917 source:c:\workspace\codeblocks\atividade 22.08.25\main.c
+	<stdio.h>
+	<stdlib.h>
+	<locale.h>
+	<math.h>
+
