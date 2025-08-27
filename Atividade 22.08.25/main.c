@@ -174,41 +174,42 @@ int main()
 
 
 
-    int dataAtu, diaAtu, mesAtu, anoAtu;
+    int dataAtu, dia, mes, ano;
 
-    printf("Digite o seu ano de nascimento(dd/mm/yyyy): ");
-    scanf("%d", &dataNasc);
-    printf("Digite o ano atual(dd/mm/yyyy): ");
+    printf("Digite o seu ano que deseja conferir(dd/mm/yyyy): ");
     scanf("%d", &dataAtu);
 
-    diaAtu = dataAtu / 1000000;
-    mesAtu = dataAtu / 10000 % 100;
-    anoAtu = dataAtu % 10000;
+    dia = dataAtu / 1000000;
+    mes = dataAtu / 10000 % 100;
+    ano = dataAtu % 10000;
 
-    if (mes > 00 && <= 12){
-        if (mes == 01 || mes == 03 || mes == 05 || mes == 07 || mes == 08 || mes == 10 || mes == 12){
-            if (dia == 31){
+    printf("%d/%d/%d\n", dia, mes, ano);
+
+    if (mes > 00 && mes <= 12){
+        if (mes == 1 || mes == 3 || mes == 5 || mes == 7 || mes == 8 || mes == 10 || mes == 12){
+            if (dia <= 31 && dia >0){
                 printf("Ele eh valido!");
             } else{
-                printf("Ele eh invalido!")
+                printf("Ele eh invalido!");
             }
-        } else if (mes == 04 || mes == 06 || mes == 09 || mes == 11){
-            if (dia == 30){
+        } else if (mes == 4 || mes == 6 || mes == 9 || mes == 11){
+            if (dia <= 30 && dia >0){
                 printf("Ele eh valido!");
             } else{
-                printf("Ele eh invalido!")
+                printf("Ele eh invalido!");
+            }
         } else {
-            if ((ano % 4 == 0 && ano % 100 != 0) || (ano % 400 == 0)){
-                if (dia == 29){
-                    printf("Ele eh valido!")
+            if (ano % 4 == 0 && ano % 100 != 0 || ano % 100 != 0 && ano % 400 == 0){
+                if (dia <= 29 && dia >0){
+                    printf("Ele eh valido!");
                 } else {
-                    printf("Ele eh invalido!")
+                    printf("Ele eh invalido!");
                 }
             }else{
-                if (dia == 28){
-                    printf("Ele eh valido!")
+                if (dia <= 28 && dia >0){
+                    printf("Ele eh valido!");
                 } else {
-                    printf("Ele eh invalido!")
+                    printf("Ele eh invalido!");
                 }
             }
         }
@@ -224,3 +225,4 @@ int main()
 
     return 0;
 }
+
