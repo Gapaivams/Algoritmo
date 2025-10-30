@@ -1,12 +1,21 @@
 #include <stdio.h>
-#include <stdlib.h>
+#include <stdlib.h>// pesquisar pq
+#include <time.h>// pesquisar pq
 
 
 int dobrar_valores(int v[], int tam){
-        for(int i=0;i<tam;i++){
-            v[i] = v[i]*2;
+    for(int i=0;i<tam;i++){
+        v[i] = v[i]*2;
+    }
+}
+
+void preencher(int *matriz[][]){
+    for (int i=0;i<5000;i++){
+        for(int j=0;j<5000;j++){
+            *matriz[i][j] = j;
         }
     }
+}
 
 
 int main()
@@ -189,6 +198,8 @@ int main()
 
 
 
+
+    /* Exercicio 9
     int vetor[5], i;
 
     for(i=0;i<5;i++){
@@ -201,6 +212,25 @@ int main()
     for(i=0;i<5;i++){
         printf("%d\n", vetor[i]);
     }
+    */
+
+
+
+
+    int matriz[5000][5000];
+    long long soma;
+    clock_t(inicio,fim);
+    double tempo_execucao;
+
+    printf("%lf", tamanho_matriz);
+
+
+
+    //loop da soma;
+
+
+    printf("%lf", tempo_execucao);
+
 
 
 
