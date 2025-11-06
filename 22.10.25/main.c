@@ -3,16 +3,19 @@
 #include <time.h>// pesquisar pq
 
 
+#define tamanho 717
+
+
 int dobrar_valores(int v[], int tam){
     for(int i=0;i<tam;i++){
         v[i] = v[i]*2;
     }
 }
 
-void preencher(int *matriz[][]){
-    for (int i=0;i<5000;i++){
-        for(int j=0;j<5000;j++){
-            *matriz[i][j] = j;
+void preencher(int matriz[tamanho][tamanho]){
+    for (int i=0;i<tamanho;i++){
+        for(int j=0;j<tamanho;j++){
+            matriz[i][j] = i+j;
         }
     }
 }
@@ -217,24 +220,88 @@ int main()
 
 
 
-    int matriz[5000][5000];
+
+
+    /*
+    // Exercicio 10
+
+
+    int matriz[tamanho][tamanho];
     long long soma;
-    clock_t(inicio,fim);
+    clock_t inicio, fim;
     double tempo_execucao;
 
-    printf("%lf", tamanho_matriz);
+
+    printf("Comparação de acesso a cache\n");
+
+    printf("Tamanho da matriz [%d,%d]\n", tamanho, tamanho);
+
+    preencher(matriz);
 
 
 
-    //loop da soma;
+    //Metodo 1 - Acesso otimizado(cache friendly)
+    soma = 0;
+    inicio = clock();
+
+    for(int i=0; i<tamanho; i++){
+        for(int j=0; j<tamanho; j++){
+            soma += matriz[i][j];
+        }
+    }
 
 
-    printf("%lf", tempo_execucao);
+    fim = clock();
+
+    tempo_execucao=(double)(fim-inicio)/CLOCKS_PER_SEC;
+
+
+    printf("Metodo Otimizado:\n");
+
+
+    printf("Soma = %lld\n", soma);
+
+
+    printf("%.6lf segundos\n", tempo_execucao);
 
 
 
 
 
+
+
+
+    //metodo 2 - Acesso nao-otimizado(cache unfriendly)
+
+    soma=0;
+    inicio = clock();
+
+    for(int j=0; j<tamanho; j++){
+        for(int i=0; i<tamanho; i++){
+            soma += matriz[i][j];
+        }
+    }
+
+
+    fim = clock();
+
+    tempo_execucao=(double)(fim-inicio)/CLOCKS_PER_SEC;
+
+
+    printf("Metodo Nao-Otimizado:\n");
+
+
+    printf("Soma = %lld\n", soma);
+
+
+    printf("%.6lf segundos\n", tempo_execucao);
+
+
+
+
+
+    printf("Conclusao: O metodo 1 deve ser mais rapido devido a localidade de referencia(cache).\n");
+    */
 
 
 

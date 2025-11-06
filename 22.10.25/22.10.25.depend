@@ -1,5 +1,6 @@
 # depslib dependency file v1.0
-1761336800 source:c:\users\gabri\onedrive\documentos\codeblock codes\22.10.25\main.c
+1762389425 source:c:\workspace\codeblocks\22.10.25\main.c
 	<stdio.h>
 	<stdlib.h>
+	<time.h>
 
